@@ -19,7 +19,7 @@ const MovieList = ({ movies, numberOfMovies = 19, excludeFirst, isMobile }) => {
             ) : (
                 <Swiper
                     direction="vertical"  // Set Swiper to vertical mode
-                    spaceBetween={150}  // Increase space to better see previous and next images
+                    spaceBetween={100}  // Increase space to better see previous and next images
                     slidesPerView={2}  // Adjust this value to control how many slides are visible at once
                     onSlideChange={(swiper) => setFocusedIndex(swiper.activeIndex)}
                     onSwiper={(swiper) => console.log('Swiper instance:', swiper)}
