@@ -18,7 +18,7 @@ const Movies = () => {
 
   const isMobile = useMediaQuery((theme) => theme.breakpoints.down('sm'));
 
-  const numberOfMovies = xl ? 19 : 17;
+  const numberOfMovies = xl ? 18 : 16;
 
   useEffect(() => {
     if (data && data.results) {
@@ -57,8 +57,8 @@ const Movies = () => {
   return (
     <div>
       {!isMobile && <FeaturedMovie movie={data.results[0]} />}
-      <MovieList movies={movies} numberOfMovies={md ? 19 : numberOfMovies} excludeFirst={!isMobile} isMobile={isMobile}/>
-      <Pagination currentPage={page} setPage={setPage} totalPages={data.total_pages}/>
+      <MovieList movies={movies} numberOfMovies={md ? 18 : numberOfMovies} excludeFirst={!isMobile} isMobile={isMobile}/>
+      {!isMobile && <Pagination currentPage={page} setPage={setPage} totalPages={data.total_pages}/>}
     </div>
   );
 };

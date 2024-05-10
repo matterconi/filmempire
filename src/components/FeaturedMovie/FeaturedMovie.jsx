@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Box, Typography, Card, CardContent, CardMedia } from '@mui/material'
 import { Link } from 'react-router-dom'
-import { StyledBox, StyledCard, StyledCardMedia, StyledCardContent } from './styles'
+import { StyledBox, StyledCard, StyledCardMedia, StyledCardContent, StyledTyphography } from './styles'
 
 const FeaturedMovie = ({ movie }) => {
   if (!movie) {
@@ -19,7 +19,7 @@ const FeaturedMovie = ({ movie }) => {
             <Box padding="20px">
                 <StyledCardContent>
                     <Typography variant="h4" component="h1">{movie.title}</Typography>
-                    <Typography variant="body1" component="p">{movie.overview}</Typography>
+                    <StyledTyphography variant="body1" component="p">{movie.overview}</StyledTyphography>
                 </StyledCardContent>
             </Box>
         </StyledCard>
