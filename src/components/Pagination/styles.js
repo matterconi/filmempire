@@ -1,7 +1,7 @@
-import styled from '@emotion/styled';
+import styled from "@mui/material/styles/styled"
 import { Button, Typography } from "@mui/material";
 
-export const StyledContainer = styled.div(({ theme }) => ({
+export const StyledContainer = styled('div')(({ theme }) => ({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
