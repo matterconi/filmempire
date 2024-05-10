@@ -26,7 +26,7 @@ const MovieList = ({ movies, numberOfMovies = 19, excludeFirst, isMobile }) => {
                 >
                     {movies.slice(start, start + numberOfMovies).map((movie, i) => (
                         <SwiperSlide key={i}>
-                            <Movie movie={movie} isFocused={focusedIndex === i} i={i}/> {/* Focused conditionally, example if the first slide is always focused */}
+                            <Movie movie={movie} isFocused={focusedIndex === i} i={i} className={focusedIndex === i ? 'movie-focused' : 'movie'}/> {/* Focused conditionally, example if the first slide is always focused */}
                         </SwiperSlide>
                     ))}
                 </Swiper>

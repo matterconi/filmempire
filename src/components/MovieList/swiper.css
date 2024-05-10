@@ -1,11 +1,11 @@
 .swiper {
-    height: 100vh;  
+    min-height: 100vh;  
     width: 100%;
 }
 
 .swiper-slide {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     text-align: center;
 }
