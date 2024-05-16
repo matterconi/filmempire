@@ -6,7 +6,8 @@ export const StyledOuterGrid = styled(Grid)(({ theme }) => ({
     display: 'flex',
     alignItems: 'center',  // Ensures vertical centering of all child components
     justifyContent: 'space-around',
-    padding: '60px 20px 0 20px !important',
+    padding: '0px 10px 0 10px !important',
+    width: '100%',
     [theme.breakpoints.down('sm')]: {
         flexDirection: 'column',
         flexWrap: 'wrap',
@@ -107,6 +108,7 @@ export const StyledDivButtonGroup = styled('div')(({ theme }) => ({
     display: 'flex',
     justifyContent: 'space-between',
     width: '100%',
+    minWidth: '275px',
     [theme.breakpoints.down('sm')]: {
         flexDirection: 'column',
     },
@@ -115,8 +117,8 @@ export const StyledDivButtonGroup = styled('div')(({ theme }) => ({
 export const StyledGridButtonGroup = styled(Grid)(({ theme }) => ({
     display: 'flex',
     justifyContent: 'space-between',
-    width: '100%',
     gap: "10px",
+    width: '100%',
     [theme.breakpoints.down('sm')]: {
         flexDirection: 'column',
     },
@@ -140,6 +142,7 @@ export const StyledIframe = styled("iframe")(({ theme }) => ({
 export const StyledContainerSpaceAround = styled(Grid)(({ theme }) => ({
     display: 'flex',
     justifyContent: 'space-around',
+    alignItems: 'center',
     margin: '10px 0 !important',
     [theme.breakpoints.down('sm')]: {
         flexDirection: 'column',

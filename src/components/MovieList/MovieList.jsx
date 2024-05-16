@@ -4,8 +4,9 @@ import 'swiper/swiper-bundle.css';
 import './swiper.css'
 import { StyledGrid } from './styles'; // Assuming StyledGrid is your custom styled component for non-mobile
 import { Movie } from '..'; // Adjust the import path as necessary
+import { useParams } from 'react-router-dom';
 
-const MovieList = ({ movies, numberOfMovies, excludeFirst, isMobile }) => {
+const MovieList = ({ movies, numberOfMovies, excludeFirst, isMobile, isRecommended }) => {
     const start = excludeFirst ? 1 : 0;
     const [focusedIndex, setFocusedIndex] = useState(0);
     return (
@@ -13,7 +14,7 @@ const MovieList = ({ movies, numberOfMovies, excludeFirst, isMobile }) => {
             {!isMobile ? (
                 <StyledGrid container spacing={4}>
                     {movies.slice(start, start + numberOfMovies).map((movie, i) => (
-                        <Movie movie={movie} key={i} isFocused={false} isMobile={isMobile}/>
+                        <Movie movie={movie} key={i} isFocused={false} isRecommended={isRecommended}/>
                     ))}
                 </StyledGrid>
             ) : (

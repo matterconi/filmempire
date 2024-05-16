@@ -21,7 +21,7 @@ const Profile = () => {
   } ,[])
 
   return (
-    <Box marginTop="60px">
+    <Box>
       <Box display="flex" justifyContent="space-between">
         <Typography variant="h4" gutterBottom>Profile</Typography>
           <Button color="inherit" onClick={logout}>

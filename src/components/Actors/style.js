@@ -11,7 +11,6 @@ export const StyledImg = styled('img')(({ theme }) => ({
 }));
 
 export const ActorContainer = styled(Box)(({ theme }) => ({
-    marginTop: '60px !important',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',

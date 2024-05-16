@@ -21,6 +21,18 @@ export const StyledLink = styled(Link)(({ theme }) => ({
     },
 }));
 
+export const RecommendedLink = styled(Link)(({ theme }) => ({
+    alignItems: 'center',
+    fontWeight: 'bold',
+    textDecoration: 'none',
+    display: 'flex',
+    flexDirection: 'column',
+    width: '100%',
+    '&:hover': {
+        cursor: 'pointer',
+    },
+}));
+
 export const StyledImg = styled('img')(({ theme }) => ({   
     borderRadius: '10px',
     height: 'auto',
@@ -37,6 +49,16 @@ export const StyledImg = styled('img')(({ theme }) => ({
         marginBottom: 0,
         top: 0, 
         left: 0
+    },
+}));
+
+export const RecommendedImg = styled('img')(({ theme }) => ({
+    borderRadius: '10px',
+    height: 'auto',
+    width: '100%',
+    marginBottom: '10px',
+    '&:hover': {
+        transform: 'scale(1.05)',
     },
 }));
 
@@ -67,6 +89,17 @@ export const StyledTitle = styled(Typography)(({ theme }) => ({
      },
 }));
 
+export const RecommendedTitle = styled(Typography)(({ theme }) => ({
+    color: theme.palette.primary.main,
+    textOverflow: 'ellipsis',
+    width: '230px', // Corrected from 'whidth'
+    overflow: 'hidden',
+    whiteSpace: 'nowrap', // Ensure this is added if not already present elsewhere in your styles
+    marginTop: '10px',
+    marginBottom: 0,
+    textAlign: 'center',
+}));
+
 export const StyledRating = styled(Rating)(({ theme }) => ({
     '& .MuiRating-iconEmpty': {
         color: theme.palette.action.disabled, // Default empty color
@@ -78,3 +111,8 @@ export const StyledRating = styled(Rating)(({ theme }) => ({
     },
 }));
 
+export const RecommendedRating = styled(Rating)(({ theme }) => ({
+    '& .MuiRating-iconEmpty': {
+        color: theme.palette.action.disabled, // Default empty color
+    },
+}));

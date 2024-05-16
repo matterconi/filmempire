@@ -1,5 +1,5 @@
 .swiper {
-    height: 100vh;  
+    height: 92.5vh;  
     width: 100%;
 }
 
@@ -9,5 +9,8 @@
     align-items: flex-start;
     text-align: center;
     position: relative;
-    height: 100%;
+}
+
+.movie {
+    display: none !important;
 }

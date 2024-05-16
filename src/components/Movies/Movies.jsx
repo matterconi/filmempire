@@ -57,7 +57,7 @@ const Movies = () => {
   return (
     <div>
       {!isMobile && <FeaturedMovie movie={data.results[0]} />}
-      <MovieList movies={movies} numberOfMovies={md ? 18 : numberOfMovies} excludeFirst={!isMobile} isMobile={isMobile}/>
+      <MovieList movies={movies} numberOfMovies={md ? 18 : numberOfMovies} excludeFirst={!isMobile} isMobile={isMobile} isRecommended={false}/>
       {!isMobile && <Pagination currentPage={page} setPage={setPage} totalPages={data.total_pages}/>}
     </div>
   );

@@ -1,9 +1,18 @@
 import { styled } from '@mui/material/styles';
-import { Box } from '@mui/material';
+import { Grid } from '@mui/material'; 
 
-export const StyledBox = styled(Box)(({ theme }) => ({
+export const StyledGrid = styled(Grid)(({ theme }) => ({
     display: 'flex',
     flexWrap: 'wrap',
-    gap: '10px',
-    margin: '20px 0',
+    overflow: 'auto',
+    overflowX: 'scroll',
+    marginBottom: '50px',
+    scrollbarWidth: 'none',  // for Firefox
+    '&::-webkit-scrollbar': {
+        display: 'none'  // for Chrome, Safari, and Opera
+    },
+    [theme.breakpoints.down('sm')]: {
+        justifyContent: 'center',
+    },
 }));
+

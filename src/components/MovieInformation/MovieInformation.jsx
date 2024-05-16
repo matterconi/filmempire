@@ -75,7 +75,7 @@ const MovieInformation = () => {
       <StyledImageGrid item sm={12} lg={4} sx={{display:"flex",justifyContent: "center"}} >
         <StyledImg src={`https://image.tmdb.org/t/p/w500${data?.poster_path}`} alt={data.title} />
       </StyledImageGrid>
-      <Grid item container direction="column" lg={7}>
+      <Grid item container direction="column" sm={12} lg={7}>
         <Typography variant="h3" align="center" gutterBottom>{data?.title} ({data?.release_date?.split('-')[0]})</Typography>
         <Typography variant="h5" align="center" gutterBottom>{data?.tagline}</Typography>
         <StyledContainerSpaceAround item >
@@ -147,7 +147,7 @@ const MovieInformation = () => {
           {isError && <Typography>Error fetching recommended movies</Typography>}
           {recommendedMovies
             ? <MovieList movies={recommendedMovies.results}
-            numberOfMovies={12}
+            numberOfMovies={12} isRecommended={true}
             />
             : <Typography>No recommended movies found</Typography>}
       </Box>
