@@ -8,7 +8,8 @@ export const StyledContainer = styled('div')(({ theme }) => ({
 }));
 
 export const StyledButton = styled(Button)(({ theme }) => ({   
-    margin: "30px 2px"
+    margin: "30px 2px",
+    cursor: "pointer",
 }));
 
 export const StyledTypography = styled(Typography)(({ theme }) => ({    

@@ -1,25 +1,30 @@
-import React from 'react'
+import React from 'react';
+import { StyledContainer, StyledButton, StyledTypography } from './styles';
 
-import { StyledContainer, StyledButton, StyledTypography } from './styles'
+const Pagination = ({ currentPage, setPage, totalPages }) => {
+  const handlePrev = () => {
+    if (currentPage === 1) return;
+    setPage((prevPage) => prevPage - 1);
+    window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll to top
+  };
 
-const Pagination = ({ currentPage, setPage, totalPages}) => {
-  const handelPrev = () => {
-    if (currentPage === 1) return
-    setPage((prevPage) => prevPage - 1)
-  }
+  const handleNext = () => {
+    if (currentPage === totalPages) return;
+    setPage((prevPage) => prevPage + 1);
+    window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll to top
+  };
 
-  const handelNext = () => {
-    if (currentPage === totalPages) return
-    setPage((prevPage) => prevPage + 1)
-  }
-
-  return ( 
+  return (
     <StyledContainer>
-        <StyledButton variant="contained" color="primary" type="button" onClick={handelPrev}>Prev</StyledButton>
-        <StyledTypography variant="h4">{currentPage}</StyledTypography>
-        <StyledButton variant="contained" color="primary" type="button" onClick={handelNext}>Next</StyledButton>
+      <StyledButton variant="contained" color="primary" type="button" onClick={handlePrev}>
+        Prev
+      </StyledButton>
+      <StyledTypography variant="h4">{currentPage}</StyledTypography>
+      <StyledButton variant="contained" color="primary" type="button" onClick={handleNext}>
+        Next
+      </StyledButton>
     </StyledContainer>
-  )
-}
+  );
+};
 
-export default Pagination
+export default Pagination;

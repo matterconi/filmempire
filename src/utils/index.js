@@ -49,3 +49,4 @@ export const fetchGenres = async () => {
         return []; // Return an empty array in case of an error
     }
 }
+

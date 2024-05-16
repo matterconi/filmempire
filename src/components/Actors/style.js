@@ -43,3 +43,9 @@ export const StyledTypography = styled(Typography)(({ theme }) => ({
 export const StyledButton = styled(Button)(({ theme }) => ({
     margin: theme.spacing(1),
 }));
+
+export const StyledButtonContainer = styled(Box)(({ theme }) => ({
+    display: 'flex',
+    gap: theme.spacing(2),
+    marginTop: theme.spacing(2),
+  }));

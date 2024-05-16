@@ -13,7 +13,6 @@ import {
 import { FeaturedMovie } from '..'
 
 const Movie = ({ movie, i, isFocused, isMobile, isRecommended }) => {
-  console.log(isRecommended);
   const LinkComponent = isRecommended ? RecommendedLink : StyledLink;
   const ImgComponent = isRecommended ? RecommendedImg : StyledImg;
   const TitleComponent = isRecommended ? RecommendedTitle : StyledTitle;

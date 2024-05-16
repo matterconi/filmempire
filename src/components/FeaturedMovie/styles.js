@@ -1,5 +1,6 @@
 import styled from '@mui/material/styles/styled';
-import { Box, Card, CardMedia, Typography } from "@mui/material";
+import { Box, Card, CardMedia, Typography, CardContent } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 export const StyledBox = styled(Box)(({ theme }) => ({
     marginBottom: '20px',
@@ -18,11 +19,11 @@ export const StyledCard = styled(Card)(({ theme }) => ({
     justifyContent: 'flex-end',
     flexDirection: 'column',
     position: 'relative',
-    backgroundColor: 'black'
+    backgroundColor: 'black',
 }));
 
 export const StyledCardMedia = styled(CardMedia)(({ theme }) => ({
-    position: 'absolute',   
+    position: 'absolute',
     top: 0,
     right: 0,
     height: '100%',
@@ -32,7 +33,7 @@ export const StyledCardMedia = styled(CardMedia)(({ theme }) => ({
     opacity: '0.75',
 }));
 
-export const StyledCardContent = styled(CardMedia)(({ theme }) => ({
+export const StyledCardContent = styled(CardContent)(({ theme }) => ({
     backgroundColor: 'transparent',
     color: 'white',
     width: '40%',
@@ -43,11 +44,14 @@ export const StyledCardContent = styled(CardMedia)(({ theme }) => ({
 }));
 
 export const StyledTyphography = styled(Typography)(({ theme }) => ({
+    display: '-webkit-box',
+    overflow: 'hidden',
+    WebkitBoxOrient: 'vertical',
+    textOverflow: 'ellipsis',
     [theme.breakpoints.down('sm')]: {
-        display: '-webkit-box',
-        overflow: 'hidden',
-        WebkitBoxOrient: 'vertical',
-        WebkitLineClamp: 4,
-        textOverflow: 'ellipsis'
+        WebkitLineClamp: 5,  // Truncate after 5 lines on small devices
+    },
+    [theme.breakpoints.up('md')]: {
+        WebkitLineClamp: 7,  // Truncate after 7 lines on medium and larger devices
     },
 }));
